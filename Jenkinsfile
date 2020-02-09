@@ -4,9 +4,11 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            echo "build number => ${env.BUILD_NUMBER}"  >> /tmp/tmp.txt
+            
+            sh label: '', script: 'echo echo "build number => ${env.BUILD_NUMBER}"  >> /tmp/tmp.txt'       }
+
          }
-      }
+     
       stage('execute shell script') {
          steps {
             echo 'I am executing the scrip'
