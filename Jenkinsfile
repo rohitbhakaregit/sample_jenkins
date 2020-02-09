@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            echo "build number => ${env.BUILD_NUMBER}"
+            echo "build number => ${env.BUILD_NUMBER}"  >> /tmp/tmp.txt
          }
       }
       stage('execute shell script') {
