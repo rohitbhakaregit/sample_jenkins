@@ -9,7 +9,7 @@ pipeline {
       }
       stage('execute shell script') {
          steps {
-            echo 'I am executing the scrip'
+            echo 'I am executing the scrip'$env.BUILD_NUMBER
             sh label: '', script: 'echo "hi from the pipeline" >> /tmp/tmp.txt'         }
       }
      
