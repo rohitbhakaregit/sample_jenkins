@@ -5,7 +5,7 @@ pipeline {
       stage('Hello') {
          steps {
             
-            sh label: '', script: 'echo "build number => "  >> /tmp/tmp.txt'       }
+            sh label: '', script: 'echo "build number => " ${env.BUILD_NUMBER}  >> /tmp/tmp.txt'       }
 
          }
      
