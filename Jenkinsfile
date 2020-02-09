@@ -4,13 +4,13 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            echo 'Hello World'
+            echo 'Hello World'  $env.BUILD_NUMBER
          }
       }
       stage('execute shell script') {
          steps {
             echo 'I am executing the scrip'
-            sh label: '', script: 'echo "hi from the pipeline" $env.BUILD_NUMBER >> /tmp/tmp.txt'         }
+            sh label: '', script: 'echo "hi from the pipeline" >> /tmp/tmp.txt'         }
       }
      
    }
